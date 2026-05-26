@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+
 import LifecycleLogger from './components/LifecycleLogger.vue';
 import SetupLab from './components/SetupLab.vue';
 import MountedLab from './components/MountedLab.vue';
@@ -72,5 +73,31 @@ header {
   margin-bottom: 20px;
 }
 
+.lab-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
+button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button.active {
+  background-color: #42b883;
+  color: white;
+  border-color: #42b883;
+}
+
+.lab-content {
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  min-height: 200px;
+}
 </style>
