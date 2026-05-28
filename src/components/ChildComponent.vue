@@ -7,30 +7,30 @@ import {
 
 defineProps(['count'])
 
-console.log('setup was called');
+console.log('[ChildComponent] setup was called');
 
 onBeforeMount(() => {
-    console.log('onBeforeMount was called');
+    console.log('[ChildComponent] onBeforeMount was called');
 })
 
 onMounted(() => {
-    console.log('onMounted was called');
+    console.log('[ChildComponent] onMounted was called');
 })
 
 onBeforeUpdate(() => {
-    console.log('onBeforeUpdate was called');
+    console.log('[ChildComponent] onBeforeUpdate was called');
 })
 
 onUpdated(() => {
-    console.log('onUpdated was called');
+    console.log('[ChildComponent] onUpdated was called');
 })
 
 onBeforeUnmount(() => {
-    console.log('onBeforeUnmount was called');
+    console.log('[ChildComponent] onBeforeUnmount was called');
 })
 
 onUnmounted(() => {
-    console.log('onUnmounted was called');
+    console.log('[ChildComponent] onUnmounted was called');
 })
 </script>
 

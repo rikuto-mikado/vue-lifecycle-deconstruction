@@ -42,7 +42,7 @@ const currentLab = ref('logger');
       </button>
       <button
         :class="{ active: currentLab === 'unmounted' }"
-        @click="currentLab = 'updated'" 
+        @click="currentLab = 'unmounted'" 
       >
         Unmounted
       </button>
@@ -50,12 +50,12 @@ const currentLab = ref('logger');
 
     <hr />
 
-    <main>
-      <LifecycleLogger />
-      <SetupLab />
-      <MountedLab />
-      <UpdatedLab />
-      <UnmountedLab />
+    <main class="lab-content">
+      <LifecycleLogger v-if="currentLab === 'logger'" />
+      <SetupLab v-if="currentLab === 'setup'" />
+      <MountedLab v-if="currentLab === 'mounted'" />
+      <UpdatedLab v-if="currentLab === 'updated'" />
+      <UnmountedLab v-if="currentLab === 'unmounted'" />
     </main>
   </div>
 
